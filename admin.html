@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="mg">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - BTP Artisan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen">
+  <!-- Login Modal -->
+  <div id="loginModal" class="fixed inset-0 bg-slate-950/90 z-50 flex items-center justify-center p-6">
+    <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 max-w-md w-full space-y-6">
+      <h2 class="text-2xl font-bold text-amber-400 text-center">Fidirana Admin</h2>
+      <form id="loginForm" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium mb-1">Tenimiafina (Password)</label>
+          <input type="password" id="adminPass" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 outline-none focus:border-amber-500">
+        </div>
+        <button type="submit" class="w-full bg-amber-500 text-slate-950 font-bold py-3 rounded-xl">Hiditra</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin Dashboard -->
+  <div id="adminDashboard" class="hidden max-w-7xl mx-auto px-6 py-12 space-y-8">
+    <div class="flex justify-between items-center border-b border-slate-800 pb-6">
+      <h1 class="text-3xl font-extrabold text-amber-400">Gestion Admin - BTP Artisan</h1>
+      <a href="index.html" class="bg-slate-800 px-4 py-2 rounded-xl text-sm font-semibold">Miverina amin'ny site</a>
+    </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 space-y-4">
+        <h2 class="text-xl font-bold text-amber-400">Fandefasana Sary (Compressor Canvas < 150KB)</h2>
+        <input type="file" id="imgUpload" accept="image/*" class="w-full bg-slate-900 border border-slate-800 rounded-xl p-3">
+        <div id="imgPreviewContainer"></div>
+      </div>
+      <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 space-y-4">
+        <h2 class="text-xl font-bold text-amber-400">Hafatra sy Devis voaray</h2>
+        <div id="messagesList" class="space-y-3 text-sm text-slate-300">Tsy misy hafatra mbola voaray.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="firebase-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
