@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+body { font-family: 'Plus Jakarta Sans', sans-serif; }
+.bg-amber-primary { background-color: #f59e0b; }
+.text-amber-primary { color: #f59e0b; }
+.border-amber-primary { border-color: #f59e0b; }
